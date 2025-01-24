@@ -1,0 +1,52 @@
+/* Minimalist Background Styles */
+body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    top: 10%;
+    left: 20%;
+    filter: blur(50px);
+  }
+  
+  body::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 15%;
+    filter: blur(75px);
+  }
+  
+  body div {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    border-radius: 10px;
+    animation: rotate 10s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
